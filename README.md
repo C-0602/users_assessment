@@ -41,22 +41,7 @@ Documentation	Postman Collection + README Guide
 
 Below is the directory structure showing modular design and separation of concerns.
 
-src/
- ├── app.module.ts
- ├── main.ts
- ├── common/
- │   ├── constants/        # roles, groups, permissions
- │   ├── decorators/       # @Permissions() decorator
- │   ├── guards/           # PermissionGuard for RBAC
- │   └── interfaces/       # shared types & permission models
- └── users/
-     ├── dto/              # create/update DTOs
-     ├── entities/         # User entity model
-     ├── repo/             # in-memory repository for CRUD ops
-     ├── store/            # predefined user, role, and group data
-     ├── users.controller.ts
-     ├── users.service.ts
-     └── users.module.ts
+<img width="732" height="481" alt="image" src="https://github.com/user-attachments/assets/cf11f1c2-3887-47ad-a16a-0ad4365c2ee6" />
 
 ## 🧠 Design Highlights
 🧱 SOLID Principles
@@ -161,5 +146,5 @@ Project runs at:
 
 Chhavi Deshlahra
 Backend Engineer @ Ericsson | NestJS | GraphQL | Azure | Clean Architecture
-- [LinkedIn Profile](https://www.linkedin.com/in/chhavi-deshlahra/)
-- GitHub Repo
+- [LinkedIn](https://www.linkedin.com/in/chhavi-deshlahra/)
+- [Github](https://github.com/C-0602/)
