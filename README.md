@@ -147,4 +147,4 @@ Project runs at:
 Chhavi Deshlahra
 Backend Engineer @ Ericsson | NestJS | GraphQL | Azure | Clean Architecture
 - [LinkedIn](https://www.linkedin.com/in/chhavi-deshlahra/)
-- [Github](https://github.com/C-0602/)
+- [Github](https://github.com/C-0602/users_assessment)
