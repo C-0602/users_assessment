@@ -1,0 +1,73 @@
+User API – Postman Usage Guide
+Base URL
+http://localhost:3000/users
+
+1. Create User (POST)
+
+Method: POST
+URL:
+
+http://localhost:3000/users
+
+
+Body (raw → JSON):
+
+{
+  "name": "Test User",
+  "roles": ["PERSONAL"],
+  "groups": ["GROUP_1"]
+}
+
+2. Read All Users (GET)
+
+Method: GET
+URL:
+
+http://localhost:3000/users
+
+
+No body needed.
+
+3. Read User by ID (GET)
+
+Method: GET
+URL (example):
+
+http://localhost:3000/users/2
+
+
+No body needed.
+
+4. Update User (PATCH)
+
+Use when you want to update only specific fields.
+
+Method: PATCH
+URL (example):
+
+http://localhost:3000/users/2
+
+Example to update groups:
+{
+  "groups": ["GROUP_2"]
+}
+
+Example to update roles:
+{
+  "roles": ["ADMIN"]
+}
+
+Example to update name:
+{
+  "name": "New Name"
+}
+
+5. Delete User (DELETE)
+
+Method: DELETE
+URL (example):
+
+http://localhost:3000/users/2
+
+
+No body needed.
