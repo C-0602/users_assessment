@@ -13,24 +13,15 @@ import { Reflector } from '@nestjs/core';
  * ------------------------------------------------------------
  * PermissionGuard
  * ------------------------------------------------------------
- * This guard enforces permission-based access control
- * using the @Permissions('CREATE') decorator on routes.
- *
- * How It Works:
- * 1. Reads the required permissions from route metadata
- *    via Reflector (set by @Permissions()).
- * 2. Extracts user ID from the "Authorization" header.
- * 3. Loads the user from UsersService (in-memory user data).
- * 4. Maps user roles → permissions (from ROLE_DEFINITIONS).
- * 5. If user has all required permissions → allow access.
- *    Otherwise → throw ForbiddenException.
+ * The @Permissions() decorator just labels the route with required permissions. The PermissionGuard reads that label and checks whether the current user has those permissions. 
+ * If yes, the request continues. If not, it is denied.
  *
  * ------------------------------------------------------------
  * 🧾 Quick Sanity Check (Role → Allowed Endpoints)
  * ------------------------------------------------------------
  * | ROLE      | ALLOWED ENDPOINTS                                 |
  * |-----------|----------------------------------------------------|
- * | ADMIN     | All (POST, GET, PATCH, DELETE, /managed/:id)   |
+ * | ADMIN     | All (POST, GET, PATCH, DELETE)   |
  * | PERSONAL  | Only GET (view data via Admin’s routes)        |
  * | VIEWER    | Only GET /users (read-only access)             |
  *
@@ -83,3 +74,4 @@ export class PermissionGuard implements CanActivate {
     return true;
   }
 }
+
